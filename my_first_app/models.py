@@ -22,7 +22,7 @@ class Author(models.Model):
     def __str__(self):
         return f"{self.name}"
 
-class Profiel(models.Model):
+class Profile(models.Model):
     author = models.OneToOneField(Author, on_delete=models.CASCADE)
     website = models.URLField()
     biography = models.TextField(max_length=500)
